@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+        <!-- Navigation Bar -->
+        <nav>
+            <a href="{{ url_for('index') }}" class="active" >Home</a>
+            <a href="{{ url_for('attendance') }}" >Attendance</a>            
+        </nav>
+    <div class="container">
+        <h1>Face Recognition System</h1>
+
+        <div class="button-container">
+            <button id="register-btn">Register Face</button>
+            <button id="verify-btn">Verify Face</button>
+            <button id="attendance-btn">Take Attendance</button>
+        </div>
+
+        <p id="status"></p>
+
+        <!-- Camera Dropdown -->
+        <div id="camera-container" ">
+            <video id="camera" autoplay></video>
+            <canvas id="canvas" "></canvas>
+        </div>
+
+        
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

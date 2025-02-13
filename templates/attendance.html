@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Records</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="{{ url_for('index') }}" >Home</a>
+        <a href="{{ url_for('attendance') }}" class="active">Attendance</a>            
+    </nav>
+
+    <h2>Attendance Info</h2>
+
+    <!-- Date Picker -->
+    <label for="date-picker">Select a Date:</label>
+    <input type="date" id="date-picker">
+
+    <p id="no-records">No attendance records for this date.</p>
+
+    <table id="attendance-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        async function fetchAttendance(date = "") {
+            let url = "/get-attendance";
+            if (date) url += `?date=${date}`;
+
+            const res = await fetch(url);
+            const data = await res.json();
+
+            const tableBody = document.querySelector("#attendance-table tbody");
+            tableBody.innerHTML = "";  // Clear existing rows
+            const noRecordsMessage = document.getElementById("no-records");
+
+            if (data.length === 0) {
+                noRecordsMessage.style.display = "block";
+                return;
+            } else {
+                noRecordsMessage.style.display = "none";
+            }
+
+            data.forEach(row => {
+                const tr = document.createElement("tr");
+                tr.innerHTML = `<td>${row.ID}</td><td>${row.Name}</td><td>${row.Time}</td>`;
+                tableBody.appendChild(tr);
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const today = new Date().toISOString().split("T")[0]; // Default to today’s date
+            document.getElementById("date-picker").value = today;
+            fetchAttendance(today);  // Load today's attendance
+            document.getElementById("date-picker").addEventListener("change", function () {
+                fetchAttendance(this.value);  // Fetch attendance for selected date
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+Flask
+numpy
+torch
+torchvision
+pandas
+Pillow
