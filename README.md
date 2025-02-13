@@ -20,18 +20,6 @@ A sleek **neumorphic-style** **Face Recognition Attendance System** built using 
 
 ---
 
-## 📂 Project Structure  
-
-/face-recognition-attendance
-│── /static                # Frontend assets (CSS, JS, images)
-│── /templates             # HTML templates (Home, Attendance page)
-│── attendance.csv         # CSV file storing attendance logs
-│── app.py                 # Main Flask application
-│── capture_faces.py       # Face registration script
-│── verify_faces.py        # Face verification script
-│── database.py            # SQLite database operations
-│── requirements.txt       # Required dependencies
-│── README.md              # Project documentation (this file)
 
 
 ## 📸 How It Works  
