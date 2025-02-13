@@ -60,7 +60,8 @@ A sleek **neumorphic-style** **Face Recognition Attendance System** built using 
 - **Calendar UI** highlights attendance times for selected days  
 
 ## 🎨 UI Preview 
-
+![alt text](image.png)
+![alt text](image-1.png)
 
 ## 🛠️ Built With  
 
