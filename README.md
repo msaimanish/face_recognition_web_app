@@ -37,7 +37,7 @@ A sleek **neumorphic-style** **Face Recognition Attendance System** built using 
 ## 📸 How It Works  
 
 ### 🔴 Step 1: Register Faces  
-1. Click **"Start Register"**  
+1. Click **"Register"**  
 2. The system captures images and processes face data  
 3. Face embeddings are extracted and stored in the database  
 
@@ -47,7 +47,7 @@ A sleek **neumorphic-style** **Face Recognition Attendance System** built using 
 3. If a match is found, a **"Verified"** message is displayed  
 
 ### 📅 Step 3: Mark Attendance  
-1. Click **"Start Attendance"**  
+1. Click **"Take Attendance"**  
 2. The system detects and verifies the face in real-time  
 3. If recognized, attendance is **automatically logged** with the timestamp  
 4. Data is stored in `attendance.csv` and displayed in the UI  
