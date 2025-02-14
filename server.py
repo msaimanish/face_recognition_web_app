@@ -18,7 +18,7 @@ model = torch.nn.Sequential(*list(model.children())[:-1])  # Remove last layer
 model.eval()
 
 # Load OpenCV's pre-trained face detector
-face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
 # Transform Pipeline
 transform = transforms.Compose([
@@ -28,8 +28,8 @@ transform = transforms.Compose([
 ])
 
 def extract_embedding_dnn(image_path):
-    prototxt_path = r"C:\Users\saima\OneDrive\Desktop\face_recognition_web_app\deploy.prototxt"
-    model_path = r"C:\Users\saima\OneDrive\Desktop\face_recognition_web_app\res10_300x300_ssd_iter_140000.caffemodel"
+    prototxt_path = r"deploy.prototxt"
+    model_path = r"res10_300x300_ssd_iter_140000.caffemodel"
 
     net = cv2.dnn.readNetFromCaffe(prototxt_path, model_path)
 
