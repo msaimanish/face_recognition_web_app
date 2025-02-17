@@ -58,26 +58,26 @@ A **cutting-edge, AI-powered** Face Recognition Attendance System with a **sleek
 
 ## 🚀 Installation & Setup  
 
-### 🔧 **1. Clone the Repository**  
+### **1. Clone the Repository**  
 ```sh
 git clone https://github.com/your-username/face-recognition-attendance.git  
 cd face-recognition-attendance
 ```
 
-### 🔧 **2. Install Required Libraries**  
+### **2. Install Required Libraries**  
 
 ```sh
 pip install -r requirements.txt
 ```
 
-### 🔧 **3. Run the Application**  
+### **3. Run the Application**  
 
 ```sh
 python app.py
 ```
 
-### 🔧 **4. Open the Web App**  
+### **4. Open the Web App**  
 
-```sh
-Go to http://127.0.0.1:5000/  in your browser
-```
+
+http://127.0.0.1:5000/  # Go to this address in your browser
+
