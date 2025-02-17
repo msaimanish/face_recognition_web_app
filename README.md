@@ -79,5 +79,5 @@ python app.py
 ### **4. Open the Web App**  
 
 
-Go to [this address](http://127.0.0.1:5000/) in your browser
+Go to http://127.0.0.1:5000/ in your browser
 
